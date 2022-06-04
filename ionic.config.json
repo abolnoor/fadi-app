@@ -1,0 +1,7 @@
+{
+  "name": "fadi-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
