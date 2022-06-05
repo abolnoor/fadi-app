@@ -7,6 +7,15 @@
     "app": {
       "root": "",
       "sourceRoot": "src",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ar-EG": {
+            "translation": "src/locale_json/messages.ar.json",
+            "baseHref": "ar/"
+          }
+        }
+      },
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -19,6 +28,8 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "localize": true,
+            "i18nMissingTranslation": "error",
             "assets": [
               {
                 "glob": "**/*",
@@ -36,7 +47,7 @@
               "src/global.scss"
             ],
             "scripts": [],
-            "aot": false,
+            "aot": true,
             "vendorChunk": true,
             "extractLicenses": false,
             "buildOptimizer": false,
@@ -76,6 +87,9 @@
               "sourceMap": true,
               "namedChunks": true
             },
+            "ar": {
+              "localize": ["ar-EG"]
+            },
             "ci": {
               "progress": false
             }
@@ -89,6 +103,9 @@
           "configurations": {
             "production": {
               "browserTarget": "app:build:production"
+            },
+            "ar": {
+              "browserTarget": "app:build:development,ar"
             },
             "ci": {
               "progress": false
