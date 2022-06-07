@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LangsService } from '../services/langs.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public  langs: LangsService) {
+  }
   minutes = 0;
   gender = 'female';
   fly = true;

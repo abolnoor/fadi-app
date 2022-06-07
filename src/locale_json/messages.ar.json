@@ -1,14 +1,14 @@
 {
-  "locale": "ar-EG",
+  "locale": "ar",
   "translations": {
     "introductionHeader": " مرحبا i18n! ",
     "5206857922697139278": "لا يولد أي عنصر",
     "392942015236586892": "شعار انغيولار",
-    "4606963464835766483": "تم التحديث {$ICU}",
+    "updatedMinutes": "تم التحديث {$ICU}",
     "2002272803511843863": "{VAR_PLURAL, plural, =0 {الآن} =1 {منذ دقيقة} other {{INTERPOLATION} دقائق مضت}}",
-    "3560311772637911677": "الكاتب هو {$ICU}",
+    "genderAuther": "الكاتب هو {$ICU}",
     "7670372064920373295": "{VAR_SELECT, select, male {ذكر} female {انثى} other {غير ذلك}}",
-    "7084163895455121261": "تم التحديث: {$ICU} ",
-    "2508975984005233379": "{VAR_PLURAL, plural, =0 {الآن} =1 {منذ دقيقة} other {{INTERPOLATION} دقائق مضت من قبل {VAR_SELECT, select, male {ذكر} female {انثى} other {غير ذلك}}}}"
+    "genderAuther2": " من قبل {$ICU}",
+    "introductionPage2": " أهلا في الصفحة الثانية "
   }
 }

@@ -1,8 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Fadi App Home
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-label>Language</ion-label>
+      <ion-select  [(ngModel)]="langs.currentLang" (ionChange)="langs.switchLanguage($event)" interface="popover">
+        <ion-select-option *ngFor="let language of langs.getLanguages()" [value]="language" >{{language.id}}</ion-select-option>
+      </ion-select>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -12,6 +18,7 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-button expand="full" routerLink="/second">Open Second Page</ion-button>
 
   <h1 i18n="User welcome|An introduction header for this sample@@introductionHeader">
     Hello i18n!
@@ -24,17 +31,14 @@
   <img [src]="logo" i18n-title title="Angular logo" alt="Angular logo"/>
   <br>
   <button type="button" (click)="inc(1)">+</button> <button type="button" (click)="inc(-1)">-</button>
-  <span i18n>Updated {minutes, plural, =0 {just now} =1 {one minute ago} other {{{minutes}} minutes ago}}</span>
+  <span i18n="@@updatedMinutes">Updated {minutes, plural, =0 {just now} =1 {one minute ago} other {{{minutes}} minutes ago}}</span>
   ({{minutes}})
   <br><br>
   <button type="button" (click)="male()">&#9794;</button> <button type="button" (click)="female()">&#9792;</button> <button type="button" (click)="other()">&#9895;</button>
-  <span i18n>The author is {gender, select, male {male} female {female} other {other}}</span>
+  <span i18n="@@genderAuther">The author is {gender, select, male {male} female {female} other {other}}</span>
   <br><br>
-  <span i18n>Updated: {minutes, plural,
-    =0 {just now}
-    =1 {one minute ago}
-    other {{{minutes}} minutes ago by {gender, select, male {male} female {female} other {other}}}}
-  </span>
+  <span i18n="@@updatedMinutes">Updated {minutes, plural, =0 {just now} =1 {one minute ago} other {{{minutes}} minutes ago}} </span>
+   <span i18n="@@genderAuther2"> by {gender, select, male {male} female {female} other {other} }</span>
   <div id="container">
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
